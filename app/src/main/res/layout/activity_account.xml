@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbarAccount"
+        layout="@layout/toolbar_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_marginBottom="50dp"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <!--Personal Details-->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_PersonalDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="20dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="start"
+                                    android:fontFamily="sans-serif-smallcaps"
+                                    android:gravity="center_vertical"
+                                    android:text="@string/label_personal_details"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:textSize="18sp" />
+
+                                <ImageView
+                                    android:id="@+id/ivEditProfile"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:src="@drawable/ic_edit_primary_dark" />
+
+                            </RelativeLayout>
+
+                            <!--LL UserId-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginTop="15dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/ic_userid_primary" />
+
+                                <TextView
+                                    android:id="@+id/tvUserUserID"
+                                    style="@style/TextViewAccount" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="1px"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginStart="40dp"
+                                android:background="@color/colorPrimaryDark" />
+
+                            <!--LL Name-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginTop="15dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/ic_person_primary" />
+
+                                <TextView
+                                    android:id="@+id/tvUserName"
+                                    style="@style/TextViewAccount" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="1px"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginStart="40dp"
+                                android:layout_marginTop="3dp"
+                                android:background="@color/colorPrimaryDark" />
+
+                            <!--LL Email-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginTop="15dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/ic_mail_primary" />
+
+                                <TextView
+                                    android:id="@+id/tvUserMail"
+                                    style="@style/TextViewAccount" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="1px"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginStart="40dp"
+                                android:layout_marginTop="3dp"
+                                android:background="@color/colorPrimaryDark" />
+
+                            <!--LL Contact-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginTop="15dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/ic_contact_primary" />
+
+                                <TextView
+                                    android:id="@+id/tvUserContact"
+                                    style="@style/TextViewAccount" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="1px"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginStart="40dp"
+                                android:layout_marginTop="3dp"
+                                android:background="@color/colorPrimaryDark" />
+
+                            <!--LL State-->
+
+                            <!--LL City-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginTop="15dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/ic_city_primary" />
+
+                                <TextView
+                                    android:id="@+id/tvUserCity"
+                                    style="@style/TextViewAccount" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="1px"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginStart="40dp"
+                                android:background="@color/colorPrimaryDark" />
+
+                            <!--LL Area-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginTop="15dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/ic_area_primary" />
+
+                                <TextView
+                                    android:id="@+id/tvUserArea"
+                                    style="@style/TextViewAccount" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="1px"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginStart="40dp"
+                                android:background="@color/colorPrimaryDark" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginTop="15dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/ic_state_primary" />
+
+                                <TextView
+                                    android:id="@+id/tvUserStreet"
+                                    style="@style/TextViewAccount" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="1px"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginStart="40dp"
+                                android:background="@color/colorPrimaryDark" />
+
+                            <!--LL Address-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginTop="15dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/ic_address_primary" />
+
+                                <TextView
+                                    android:id="@+id/tvUserAddress"
+                                    style="@style/TextViewAccount" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="1px"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginStart="40dp"
+                                android:background="@color/colorPrimaryDark" />
+
+                            <!--LL Pincode-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginTop="15dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/ic_pincode_primary" />
+
+                                <TextView
+                                    android:id="@+id/tvUserPincode"
+                                    style="@style/TextViewAccount" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="1px"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginStart="40dp"
+                                android:background="@color/colorPrimaryDark" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!--Agent Details-->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardAgentDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="20dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="start"
+                                android:fontFamily="sans-serif-smallcaps"
+                                android:gravity="center_vertical"
+                                android:text="@string/label_agent_details"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="18sp" />
+
+                            <!--LL Agent Name-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/ic_person_primary" />
+
+                                <TextView
+                                    android:id="@+id/tvAgentName"
+                                    style="@style/TextViewAccount" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="1px"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginStart="40dp"
+                                android:layout_marginTop="3dp"
+                                android:background="@color/colorPrimaryDark" />
+
+                            <!--LL Agent Contact-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginTop="15dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/ic_contact_primary" />
+
+                                <TextView
+                                    android:id="@+id/tvAgentContact"
+                                    style="@style/TextViewAccount" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="1px"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginStart="40dp"
+                                android:layout_marginTop="3dp"
+                                android:background="@color/colorPrimaryDark" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!--Change Password-->
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardChangePassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/colorAccent"
+                android:layout_alignParentBottom="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/label_change_password"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/ic_chevron_right_primary_dark" />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <ProgressBar
+                android:visibility="gone"
+                android:id="@+id/progressBarService"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

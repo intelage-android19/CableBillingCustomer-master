@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbarHistory"
+        layout="@layout/toolbar_layout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp"/>
+
+        <!--LL No Plans Found-->
+        <LinearLayout
+            android:id="@+id/ll_NoHistory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/colorAppThemAlphaAccent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_no_history_found" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/no_history"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btnPurchase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:elevation="5dp"
+                android:textAllCaps="false"
+                android:text="@string/button_purchase"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:background="@color/colorPrimary" />
+
+        </LinearLayout>
+
+        <!--LL No Internet Connectivity Found-->
+        <LinearLayout
+            android:id="@+id/llNoInternetHistory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/no_internet" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/label_no_internet"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvRetryHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_retry"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBarHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center" />
+
+        <include
+            layout="@layout/nodata"/>
+
+
+        <ImageView
+            android:id="@+id/imgMoreDetails"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="20dp"
+            android:src="@drawable/moredetails"/>
+    </RelativeLayout>
+</LinearLayout>

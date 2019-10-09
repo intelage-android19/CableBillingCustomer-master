@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dashboard_background"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar_main"
+        layout="@layout/main_toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:clickable="true"
+        android:layout_height="fill_parent">
+
+
+        <Button
+            android:id="@+id/txtEnquiry"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentBottom="true"
+            android:text="Inquire your query here!!!"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:background="@color/trans"
+            android:clickable="true"
+      />
+
+
+        <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!--LL Plan & History-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="5dp"
+                    android:weightSum="2">
+
+                    <!--FL Plans-->
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:id="@+id/llPlans"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:padding="10dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardPlan"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                app:cardBackgroundColor="@android:color/white"
+                                app:cardCornerRadius="3dp"
+                                app:cardElevation="6dp"
+                                app:cardUseCompatPadding="true">
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="120dp"
+                                    android:padding="20dp">
+
+                                    <TextView
+                                        android:id="@+id/tvPlans"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentBottom="true"
+                                        android:fontFamily="sans-serif"
+                                        android:gravity="center"
+                                        android:text="@string/dashboard_card_label_plan"
+                                        android:textColor="@color/colorAccent"
+                                        android:textSize="18sp" />
+
+                                </RelativeLayout>
+                            </androidx.cardview.widget.CardView>
+
+                        </LinearLayout>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardPlanBackground"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            app:cardBackgroundColor="@color/colorMatOrange"
+                            app:cardCornerRadius="3dp"
+                            app:cardElevation="6dp"
+                            app:cardUseCompatPadding="true">
+
+                            <ImageView
+                                android:id="@+id/ivPlan"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="10dp"
+                                android:padding="4dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/ic_plans" />
+                        </androidx.cardview.widget.CardView>
+
+                    </FrameLayout>
+
+                    <!--FL History-->
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:id="@+id/llHistory"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:padding="10dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardHistory"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                app:cardBackgroundColor="@android:color/white"
+                                app:cardCornerRadius="3dp"
+                                app:cardElevation="6dp"
+                                app:cardUseCompatPadding="true">
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="120dp"
+                                    android:padding="20dp">
+
+                                    <TextView
+                                        android:id="@+id/tvHistory"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentBottom="true"
+                                        android:fontFamily="sans-serif"
+                                        android:gravity="center"
+                                        android:text="@string/dashboard_card_label_history"
+                                        android:textColor="@color/colorAccent"
+                                        android:textSize="18sp" />
+
+                                </RelativeLayout>
+                            </androidx.cardview.widget.CardView>
+
+                        </LinearLayout>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardHistoryBackground"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            app:cardBackgroundColor="@color/colorMatOrange"
+                            app:cardCornerRadius="3dp"
+                            app:cardElevation="6dp"
+                            app:cardUseCompatPadding="true">
+
+                            <ImageView
+                                android:id="@+id/ivHistory"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="10dp"
+                                android:padding="4dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/ic_history" />
+
+                        </androidx.cardview.widget.CardView>
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <!--<android.support.v7.widget.CardView
+                    android:id="@+id/cardCurrentPlan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:padding="10dp"
+                    app:cardCornerRadius="5dp"
+                    app:cardUseCompatPadding="true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="5dp">
+
+                        <TextView
+                            android:id="@+id/tvCurrentPlan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:text="@string/dashboard_card_current_plan_details"
+                            android:textSize="16sp"
+                            android:textColor="@color/colorAccent"/>
+
+                        <View
+                            android:id="@+id/view"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.6dp"
+                            android:background="@color/colorAccent"
+                            android:layout_below="@+id/tvCurrentPlan"/>
+
+
+                        &lt;!&ndash;RL Current Plan Details Progress Bar&ndash;&gt;
+                        <RelativeLayout
+                            android:id="@+id/rlCurrentPlanDetails"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_below="@+id/view"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ProgressBar
+                                android:id="@+id/progressBarView"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_marginStart="5dp"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:indeterminateOnly="false"
+                                android:rotation="-90"
+                                android:max="100"
+                                android:progressDrawable="@drawable/circular_progressbar" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llCurrentPlanDetails"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/view"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@+id/rlCurrentPlanDetails"
+                            android:layout_marginStart="15dp"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/tvCurrentPlanName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/white"
+                                android:textSize="18sp"
+                                android:text="Plan Name"/>
+
+                            <TextView
+                                android:id="@+id/tvCurrentPlanPrice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="16sp"
+                                android:text="2200"/>
+
+                            <TextView
+                                android:id="@+id/tvExpireDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="16sp"
+                                android:text="22-10-2018" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>-->
+
+                <!--Card Current Plan Details-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardCurrentPlan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="5dp"
+                    android:padding="10dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:id="@+id/ll_labelCurrentPlan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvCurrentPlan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:text="@string/dashboard_card_current_plan_details"
+                            android:textColor="@android:color/white"
+                            android:textSize="18sp" />
+
+                        <View
+                            android:id="@+id/view"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.6dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@android:color/white" />
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RelativeLayout
+                                android:id="@+id/rlCurrentPlanDetails"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:padding="10dp">
+
+                                <!--LL Days Left-->
+                                <LinearLayout
+                                    android:id="@+id/llRemainingTime"
+                                    android:layout_width="150dp"
+                                    android:layout_height="150dp"
+                                    android:layout_marginTop="15dp"
+                                    android:background="@drawable/card_bg"
+                                    android:elevation="5dp"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:padding="10dp">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/ic_access_time_white_24dp" />
+
+                                    <TextView
+                                        android:id="@+id/tvRemainingDays"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="4dp"
+                                        android:text=""
+                                        android:textColor="@android:color/white"
+                                        android:textSize="18sp" />
+
+                                    <TextView
+                                        android:id="@+id/tvMonthORDays"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="4dp"
+                                        android:text="Days Left"
+                                        android:textColor="@android:color/white"
+                                        android:textSize="18sp" />
+
+                                </LinearLayout>
+
+                                <!--LL Pay Now-->
+                                <LinearLayout
+                                    android:id="@+id/llMoredetails"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_toEndOf="@+id/llRemainingTime"
+                                    android:background="@drawable/card_bg"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:padding="10dp">
+
+                                    <TextView
+                                        android:id="@+id/tvPayNow"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/more_details"
+                                        android:textColor="@android:color/white"
+                                        android:textSize="12sp" />
+
+                                </LinearLayout>
+
+                                <!--LL Due Balance-->
+                                <LinearLayout
+                                    android:id="@+id/llDueBalance"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:layout_below="@+id/llMoredetails"
+                                    android:layout_marginStart="6dp"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_toRightOf="@+id/llRemainingTime"
+                                    android:background="@drawable/card_stork_bg"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:padding="10dp">
+
+                                    <TextView
+                                        android:id="@+id/tv_labelDueBalance"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:text="@string/label_due_balance"
+                                        android:textColor="@android:color/white"
+                                        android:textSize="14sp" />
+
+                                    <TextView
+                                        android:id="@+id/tvDueBalanceAmount"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:text=""
+                                        android:textColor="@android:color/white"
+                                        android:textSize="16sp" />
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                            <!--No Current Plan Activated-->
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardNoCurrentPlan"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:visibility="gone"
+                                app:cardBackgroundColor="@android:color/transparent"
+                                app:cardElevation="0dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:padding="10dp">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/no_current_plan" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="@string/label_no_current_plan"
+                                        android:textColor="@android:color/white"
+                                        android:textSize="18sp" />
+
+                                    <Button
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:background="@drawable/button_stork_ripple_background"
+                                        android:text="@string/button_buy_now"
+                                        android:textColor="@android:color/white"
+                                        android:textSize="16sp" />
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!--Card Account-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_weight="2"
+                            android:text="@string/label_account"
+                            android:textColor="@android:color/white"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="end|center_vertical"
+                            android:layout_marginEnd="5dp"
+                            android:src="@drawable/ic_right" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+</LinearLayout>

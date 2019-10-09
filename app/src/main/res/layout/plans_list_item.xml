@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="3dp" >
+
+    <!--LL Outer LinearLayout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:layout_margin="5dp"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/due11"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Plan Name"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/due1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toRightOf="@+id/due11"
+                    android:text=":"
+                    android:textColor="@android:color/black"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tvPlanName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="3"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif"
+                    android:textSize="18sp"
+                    android:layout_marginStart="10dp"
+                    android:layout_toRightOf="@+id/due1"
+                    android:text="Aditya Falcon"
+                    android:textColor="@android:color/black"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/due21"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Validity"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/due2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toRightOf="@+id/due21"
+                    android:text=":"
+                    android:textColor="@android:color/black"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tvPlanValidity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif"
+                    android:textSize="16sp"
+                    android:layout_marginStart="10dp"
+
+                    android:text="30 days"
+                    android:layout_toRightOf="@+id/due2"
+                    android:textColor="@color/colorPrimary"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/due31"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Plan Price"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/due3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toRightOf="@+id/due31"
+                    android:text=":"
+                    android:textColor="@android:color/black"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tvPlanPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:layout_marginStart="10dp"
+android:textColor="@android:color/black"
+                    android:ellipsize="end"
+                    android:layout_toRightOf="@id/due3"
+                    android:fontFamily="sans-serif"
+                    android:textSize="16sp"
+                    android:text="380.00" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tvPlanDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:visibility="gone"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif"
+                android:textSize="16sp"
+                android:textColor="@color/colorBlue"
+                android:text="@string/label_more_details"
+                android:autoLink="all"
+                android:textColorLink="@color/colorBlue"
+                />
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@drawable/toolbar_bg"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/button_buy"
+            android:textSize="20sp"
+            android:visibility="gone"
+            android:textColor="@android:color/white"
+            android:gravity="center"/>
+
+        <!--Green #5cd65c-->
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

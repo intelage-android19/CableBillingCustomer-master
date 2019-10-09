@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#D88B62</color>
+    <color name="colorPrimaryDark">#4d5460</color>
+    <color name="colorAccent">#4d5460</color>
+
+    <color name="colorMatLightAlphaOrange">#e0a585</color>
+    <color name="colorMatLightOrange">#E6B499</color>
+    <color name="colorMatOrange">#D88B62</color>
+    <color name="colorMatDarkOrange">#CE664D</color>
+    <color name="colorAppThemAlphaAccent">#d5d8dd</color>
+    <color name="colorBlue">#3333ff</color>
+    <color name="transparant">#80000000</color>
+    <color name="gray">#809C9999</color>
+    <color name="white">#FFFFFF</color>
+    <color name="trans">#00000000</color>
+
+
+</resources>
